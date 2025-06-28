@@ -1,11 +1,10 @@
 #include <Arduino.h>
 #include <F1sh.h>
-#include <motor.h>
 
 /*
   This is a quickstart example for F1sh, this is a good way to explore F1sh and its capabilities.
   This example assumes that you are using F1sh's motor driver board which containes 4 motors and 6 servos powered by an Adafruit's PCA9685 controller.
-  Released under the Creative Commons Attribution-NonCommercial 4.0 International License.
+  Released GNU GPLv3 license.
   For more infomation on F1sh, please visit: https://github.com/F1sh-org/F1sh.git
 */
 
@@ -30,12 +29,10 @@ F1sh f1sh;
 
 void handleGamepad() {
   // This function is called when the gamepad is connected
-  // You can use this to initialize the gamepad or do any other setup
 }
 
 void setup() {
   Serial.begin(115200);
-  initMotors();
   f1sh.F1shInitAP(ssid, password, hostname, channel);
   #ifdef CORE_DEBUG_LEVEL
     Serial.setDebugOutput(true);
